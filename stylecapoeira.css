@@ -1,0 +1,470 @@
+/*propriedade gerais e body*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+#logo-arc{
+    width: 40px;
+    border-radius: 50%;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content:center;
+    background-color: #e3e9f7;
+}
+.flex{
+    display: flex;
+}
+/*Sidebar como um todo*/
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    height: 100vh; /*define o tamanho da side bar, no caso de 100% do que podemos enxeregar da altura do site*/
+    position: fixed; 
+    z-index: 10;/*deixa a side bar fixa na lateral da tela*/
+    left: 0;/*deixa a side bar grudada na esquerda da tela*/
+    border-radius: 0px 18px 18px 0px; /* 0px (borda superior esquerda) 18px (borda superior direita) 18px (borda inferior direita) 0px (borda inferior esquerda)*/
+    transition: all .5s;
+    min-width: 62px;
+}
+#sidebar-content{
+    padding: 10px;
+}
+#user-capoeira{
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px; /*espaço entre a imagem e o texto*/
+    align-items: center;
+}
+#user-infos{
+    display: flex;
+    flex-direction: column;
+}
+#user-infos span:last-child{
+    color: #6b6b6b;
+    font-size: 12px;
+}
+#side-itens{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.side-item{
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.side-item.active{ 
+    /*quando o elemento estiver ativo, fazer as alterações descritas aqui dentro*/
+    background-color: #ba274a;
+}
+.side-item:hover:not(.active), #logout-btn:hover{
+     /*Os elementos que não estiverem ativos vão fazer as alterações descritas aqui dentro*/
+    background-color: #e3e9f7;
+}
+.side-item a{ 
+    /*decoração do texto dos itens*/
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    
+}
+.side-item.active a{
+    color: #e3e9f7;
+}
+.side-item a i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+#logout{
+    border: 1px solid #e3e9f7;
+    padding: 12px;
+}
+#logout-btn{
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 8px;
+    text-align: start;
+    cursor: pointer;
+    background-color: transparent;
+}
+#open-btn{
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    background-color: #ba274a;
+    color: #e3e9f7;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+.item-description{
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    transition: width .6s;
+}
+#sidebar.open-sidebar{
+    min-width: 12%;
+}
+#sidebar.open-sidebar .item-description{ 
+    width: 140px;
+}
+#sidebar.open-sidebar .side-item a{ 
+    justify-content: flex-start;
+    gap: 14px;
+}
+.open-sidebar #open-btn-icon{
+    transform: rotate(180dg);
+}
+
+/*CONTEUDO DO SITE*/
+
+main{
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section{
+    display: flex;
+    justify-content: center;
+}
+/*Primeira parte do site (sobre a associação)*/
+.flex img{
+    max-width: 400px;
+    min-width: 200px;
+    width: 400px;
+    border-radius: 50%;
+}
+.topo-site .flex{
+    align-items: center;
+    justify-content: center;
+    color: black;
+    gap: 80px;
+} 
+.flex h1{
+    font-size: 40px;
+}
+.flex p{
+    font-size: 20px;
+}
+body::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #841C26;    
+    background-size: cover;
+    z-index: -1;
+    max-height: 200px;
+}
+/*Segunda parte do site (História da capoeira)*/
+
+.flex-secao2{
+    display: flex;
+    align-items: center;
+    color: black;
+    gap: 50px;
+    width: 100%;
+    max-width: 920px;
+    height: 600px;
+}
+
+.flex-secao2 img{
+    width: 300px;
+    border-radius: 20px;
+}
+.texto-com-imagem{
+    display: flex;
+   flex-direction: column;
+   background-color: white;
+   border-radius: 20px;
+}
+.historia-capoeira p{
+    font-size: 20px;
+    border-left: 2px black solid;
+    padding-left: 10px;
+}
+.texto-com-imagem img{
+    width: 400px;
+    border-radius: 0 0 20px 20px;
+}
+.texto-com-imagem h1{
+    text-align: center;
+    font-size: 70px;
+}
+.texto-com-imagem h2{
+    text-align: center;
+    font-size: 30px;
+}
+.icons{
+    width: 40px;
+    border-radius: 50%;
+}
+.historia-mestre{
+    font-size: 20px;
+    border-left: 2px black solid;
+    padding-left: 10px;
+    background-color: aliceblue;
+    border-radius: 0px 30px 30px 0px;
+    height: 70%;
+}
+.mestres-associacao img{
+    width: 200px;
+}
+.mestres-associacao{
+    height: 700px;
+    background-color: #841C26;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px black; 
+    align-items: center;
+
+}
+.mestres-associacao h1{
+    margin-left: 10px;
+    color: whitesmoke;
+    font-size:30px;
+}
+.mestres-arc{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 250px;
+    height: 400px;
+    gap: 20px;
+    background-color: rgb(30, 28, 28);
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 2px 2px 10px black;
+    margin: 40px;
+}
+.mestres-arc img{
+    border-radius: 30px 30px 0px 0px;
+    width: 100%;
+    
+}
+.sobre-mestres a{
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    font-family: DejaVu Sans Mono, monospace;
+    color: black;
+    border: none;
+    margin: 20px;
+    padding: 12px 20px;
+    
+    font-size: 1.1rem;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(25, 32, 44, 0.3);
+}
+.sobre-mestres a:hover{
+    background-color: gray;
+    color: aliceblue;
+}
+.projeto{
+    max-width: 400px;
+    min-width: none;
+    width: 300px;
+    height: 400px;
+    background-color: #e3e9f7;
+    margin: 30px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 1000ms;
+    position: relative;
+}
+.projeto:hover{
+    background-position: 0% 100%;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25, 23, 23, 0.681);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+    opacity: 0;
+    transition: 1000ms;
+    box-shadow: 2px 2px 10px white;
+}
+.overlay:hover{
+    opacity: 1;
+    box-shadow: 2px 2px 10px white;
+}
+.flex-projetos{
+    display: flex;
+    justify-content: center;
+}
+#projetos-capoeira{
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-items: center;
+    background-color: black;
+    height: 600px;
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px black;
+    margin-bottom: 10vh;
+}
+#projetos-capoeira h1{
+    color: white;
+    font-size: 40px;
+}
+/*Cadastro e formulário*/
+.body-cadastro{
+    /**/
+    /*Corpo da página de cadastro*/
+    background-color: #dacdce;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.conteiner{
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+    border-radius: 20px;
+    background-color: white;
+}
+.form-img{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(192, 33, 33);
+    border-radius: 20px 0px 0px 20px;
+}
+.form-img img{
+    width: 400px;
+    
+}
+.form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+.input-grup{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+.input-box input{
+    margin: 1.2rem 0;
+    padding: 1rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+.input-box input:hover{
+    background-color: #eeeeee76;
+}
+.input-box input:focus-visible{
+    outline: 1px solid rgba(0, 0, 0, .212);
+}
+.gender-grups{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 0.5rem ;
+}
+.gender-input{
+    display: flex;
+    align-items: center;
+}
+.gender-input input{
+    margin-right: 0.35rem;
+}
+.gender-input label{
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0
+}
+.continue-bottom button{
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: rgb(192, 33, 33);
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.continue-bottom button a{
+    text-decoration: none;
+    font-size: 0.93rem;
+    color: aliceblue;
+}
+@media screen and (max-width: 1330px){
+    .form-img{
+        display: none;
+    }
+    .conteiner{
+        width: 50%;
+    }
+    .form{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1060px){
+    .conteiner{
+        width: 90%;
+        height: auto;
+    }
+    .input-grup{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 3rem;
+    }
+    .gender-input{
+        margin-top: 2rem;
+    }
+    .gender-grups{
+        flex-direction: column;
+    }
+}
+

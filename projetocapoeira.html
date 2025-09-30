@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="icon" type="image/png" href="imagens-capoeira/associacao-capoeira.jpg" />
+    <title>ARC</title>
+    <link rel="stylesheet" href="stylecapoeira.css">
+</head>
+<body>
+    <nav id="sidebar">
+        <div id="sidebar-content"> <!--div responsável por organizar todos os elementos (guias de navegação, logo e titulo)-->
+            <div id="user-capoeira">
+                <img src="imagens-capoeira/associacao-capoeira.jpg" id="logo-arc" alt="" width="50px">
+                <p id="user-infos">
+                    <span class="item-description">Associação Rei</span>
+                    <span class="item-description">Capoeira</span>
+                </p>
+            </div>
+            <ul id="side-itens">
+                <li class="side-item active">
+                    <a href="#">
+                        <i class="fa fa-map" aria-hidden="true"></i><!--icone de navegação-->
+                        <span class="item-description">
+                            Nosso site
+                        </span>
+                    </a>
+                </li>
+                <li class="side-item">
+                    <a href="#historia">
+                        <i class="fa fa-history" aria-hidden="true"></i><!--icone de navegação-->
+                        <span class="item-description">
+                            Origem
+                        </span>
+                    </a>
+                </li>
+                <li class="side-item">
+                    <a href="#primeiro-mestre">
+                        <i class="fa fa-address-card" aria-hidden="true"></i><!--icone de navegação-->
+                        <span class="item-description">
+                            Primeiros Mestres
+                        </span>
+                    </a>
+                </li>
+            
+                <li class="side-item">
+                    <a href="#conheca-nossos-mestres">
+                        <i class="fa fa-address-card" aria-hidden="true"></i><!--icone de navegação-->
+                        <span class="item-description">
+                            nossos mestres
+                        </span>
+                    </a>
+                </li>
+                <li class="side-item">
+                    <a href="#projetos-capoeira">
+                        <i class="fa fa-file-text" aria-hidden="true"></i><!--icone de navegação-->
+                        <span class="item-description">
+                            projetos
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <button id="open-btn">
+                <i id="open-btn-icon" class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </div>
+          
+        
+    </nav>
+<main>
+    <!--TOPO DO SITE-->
+    <section class="topo-site">
+        <div id="sobre-o-site">
+            <div class="flex">
+                <div class="txt-topo-site">
+                    <h1>Associação Rei de Capoeira</h1>
+                    <p>A Associação Rei de Capoeira é uma instituição que visa <br>o desenvolvimento da capoeira no âmbito cultural, histórico e esportivo.</p>
+                </div><!--conteúdo de texto principal-->
+                <div class="img-topo-site">
+                    <img src="imagens-capoeira/associacao-capoeira.jpg" alt="">
+                </div><!--imagem principal do site-->
+            </div><!--div da primeira area do site.
+            obs:com display flex-->
+        </div><!--interface-->
+    </section>
+    <!--SEGUNDA PARTE - HISTÓRIA CAPOEIRA-->
+    <section>
+        <div id="historia" class="segunda-secao">
+            <div class="flex-secao2">
+                <div class="texto-com-imagem">
+                    <h1>CAPOEIRA</h1>
+                    <h2>Como surgiu?</h2>
+                    <img src="/junin/imagens-capoeira/historia-capoeira.jpg" alt="">
+                </div>
+                <div class="historia-capoeira">
+                    <p>A capoeira surgiu como resposta a violência a qual <br> os escravizados eram submetidos em tempos coloniais e imperiais no Brasil.<br> A partir de golpes e movimentos corporais ágeis, a luta permitia que eles <br>se defendessem das brutais perseguições dos capitães do mato, cuja atribuição era<br> capturar quem havia fugido</p>
+                </div>
+            </div> <!--display flex-->
+        </div> <!--interface-->
+    </section><!--Segunda Seção-->
+    <!--Primeiros mestres da capoeira-->
+    <section id="primeiro-mestre" class="section">
+        <div class="flex-secao2">
+            <div class="foto-mestre">
+                <img src="imagens-capoeira/pastinha.jpg" alt="">
+            </div>
+            <div class="historia-mestre">
+                <h1>MESTRE PASTINHA</h1>
+                <p>Mestre Bimba teve um papel fundamental na história da capoeira, ao transformar a luta em um sistema organizado com métodos de ensino, rituais e especializações. Ele buscou legitimar a capoeira, que era vista como uma prática de marginalizados, e criou a capoeira regional, um estilo mais rápido e dinâmico. </p>
+            </div>
+        </div>
+    </section>
+    <section class="mestre-bimba">
+        <div class="flex-secao2">
+        
+            <div class="historia-mestre">
+                <h1>MESTRE BIMBA</h1>
+                <p>Mestre Pastinha, cujo nome completo era Vicente Ferreira Pastinha, foi um mestre e grande divulgador da Capoeira Angola, uma das modalidades mais tradicionais do Brasil. Nascido em Salvador, Bahia, em 5 de abril de 1889, ele teria aprendido capoeira com um africano chamado Benedito, quando era criança. Pastinha tornou-se conhecido por defender e divulgar a Capoeira Angola, com sua forma mais lenta, lúdica e rasteira. </p>
+            </div>
+            <div class="foto-mestre">
+                <img src="imagens-capoeira/bimba.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="conheca-nossos-mestres" class="mestres-associacao">
+        <h1>NOSSOS MESTRES</h1>
+        <div class="mestres-arc">
+            <img src="imagens-capoeira/bezerra.png" alt="">
+            <div  class="sobre-mestres">
+                <h1>BEZERRA</h1>
+                <a href="mestreBezerra.html" >sobre</a>
+            </div>
+        </div>
+        <div class="mestres-arc">
+            <img src="imagens-capoeira/waldeci.png" alt="">
+            <div class="sobre-mestres">
+                <h1>WALDECI</h1>
+                <a href="mestreWaldeci.html" >sobre</a>
+            </div>
+        </div>
+        <div class="mestres-arc">
+            <img src="imagens-capoeira/nazareno.png" alt="">
+            <div class="sobre-mestres">
+                <h1>NAZARENO</h1>
+                <a href="mestreNazareno.html" >sobre</a>
+            </div>
+        </div>
+    </section>
+    <section id="projetos-capoeira">
+        <h1>CONHEÇA NOSSOS PROJETOS</h1>
+        <div class="flex-projetos">
+            <div class="projeto" style="background-image: url(imagens-capoeira/capoeira-baby/projeto-baby.jpg);">
+                <div class="overlay">
+                    CAPOEIRA BABY
+                </div>
+            </div>
+            <div class="projeto" style="background-image: url(imagens-capoeira/capoeira-baby/projeto-capoeiragem.jpg);">
+                <div class="overlay">
+                    CAPOEIRAGEM
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+    <script src="script.js"></script>
+</body>
+</html>
+<!---->

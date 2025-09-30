@@ -1,0 +1,10 @@
+.item {
+  padding: 10px;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.item.selecionado {
+  background-color: lightgreen; /* cor quando selecionado */
+}
