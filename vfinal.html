@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +8,40 @@
 </head>
 <body>
     <header>
-        <nav>
-            <img src="associacao-capoeira.jpg" alt="">
-            <div class="login-cadastro">
-                <a href="" class="btn-login">LOGIN</a>
-                <a href="" class="btn-cadastro">CADASTRO</a>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="associacao-capoeira.jpg" alt="">
             </div>
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Sobre nós</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Capoeira</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"> Mestres</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"> Mestres ARC</a></li>
+                    <li class="nav-item"><a href="#projetos-de-capoeira" class="nav-link"> Projetos</a></li>
+                </ul>
             </div>
-            <ul class="nav-list">
-                <li class="item"><a href="">Nosso Site</a></li>
-                <li class="item"><a href="">Capoeira</a></li>
-                <li class="item"><a href="">Mestres</a></li>
-                <li class="item"><a href="">Mestres ARC</a></li>
-                <li class="item"><a href="#projetos-de-capoeira">projetos</a></li>
-            </ul>
+            <div class="login-button">
+                <button><a href="#">Entrar</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="menu_white_36dp.svg" alt=""></button>
+            </div>
         </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre nós</a></li>
+                <li class="nav-item"><a href="#historia-capoeira" class="nav-link">Capoeira</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"> Mestres</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"> Mestres ARC</a></li>
+                <li class="nav-item"><a href="#projetos-de-capoeira" class="nav-link"> Projetos</a></li>
+            </ul>
+
+            <div class="login-button">
+                <button><a href="#">Entrar</a></button>
+            </div>
+        </div>
     </header>
     <main>
         <section id="historia-capoeira">

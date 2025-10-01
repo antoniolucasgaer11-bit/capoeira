@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
-     font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
 }
 html{
     font-size: 16px;
@@ -8,6 +9,7 @@ html{
 body{
         margin-top: 0px;
         margin-left: 0px;
+        overflow-x: hidden;
 }
 main{
     padding-top: 6rem;
@@ -29,90 +31,99 @@ a:hover{
     opacity: 0.7;
 }
 /* NAV LIST*/
-nav{
-    margin-top: 0px;
+header {
+    background-color: #A31621;
+    box-shadow: 0px 3px 10px #464646;
+
+}
+.nav-bar {
     display: flex;
-    position: fixed;
-    width: 100%;
-    background-color: #a31621;
-    border-radius: 0px 0px 10px 10px;
-    margin-bottom: 4rem;
+    justify-content: space-between;
+    padding: 1.5rem 2.5rem;
+}
+.logo {
+    display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 6rem;
-    z-index: 1;
 }
-.nav-list{
+.logo h1 {
+    color: #fff;
+}
+.nav-list {
     display: flex;
+    align-items: center;
 }
-.item{
-    letter-spacing: 3px;
-    margin-left: 2rem;
+.nav-list ul {
+    display: flex;
+    justify-content: center;
     list-style: none;
 }
-.item.selecionado{
-    background-color: #ced3dc;
+.nav-item {
+    margin: 0 15px;
 }
-.mobile-menu{
+.nav-link {
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 400;
+}
+.login-button button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #e0f2e9; /* cor bonitinha*/
+}
+.login-button button a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.mobile-menu-icon {
     display: none;
-    cursor: pointer;
 }
-.mobile-menu div{
-    width: 2rem;
-    height: 2px;
-    background: #fff;
-    margin: 8px;
+.icon{
+    border-radius: 0%;
 }
-
-.nav-list.active{
-    transform: translateX(0);
-}
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.mobile-menu {
+    display: none;
 }
 
-.mobile-menu.active .line1 {
-  transform: rotate(-45deg) translate(-8px, 8px);
-}
 
-.mobile-menu.active .line2 {
-  opacity: 0;
-}
-
-.mobile-menu.active .line3 {
-  transform: rotate(45deg) translate(-5px, -7px);
-}
 /**/
 /* História da capoeira */
 #historia-capoeira{
+    margin-top: 300px;
     display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    justify-items: center;
+    background-color: #ced3dc;
     max-height: 1000px;
+    box-shadow: 3px 3px 100px rgb(125, 106, 187);
+    margin-bottom: 10vh;
+    width: 100%;
+    min-height: 400px;
 }
-
 #conteiner-historia{
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 100%;
+    
 }
 .bio-historia{
     padding: 1rem;
-    width: 50%;
+    width: 100%;
     line-height: 1.2;
+    align-items: center;
+    justify-content: center;
 }
 .img-historia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50%;
 }
 .img-historia img{
+    max-width: 100%;
     width: 30rem;
     border-radius: 20%;
 }
@@ -195,42 +206,58 @@ nav{
 
 /* RESPONSIVO */
 
-@media (max-width:999px){
-    body{
-        overflow-x: hidden;
+@media screen and (max-width: 990px) {
+    /* NAV BAR*/
+    .nav-bar {
+        padding: 1.5rem 2rem;
     }
-    .nav-list{
-        position: absolute;
-        top: 8vh;
-        right: 0;
-        width: 100vw;
-        height: 92vh;
-        background: #a31621;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
+    .nav-item {
+        display: none;
     }
-    .nav-list li{
-        margin-left: 0;
-        opacity: 0;
+    .login-button {
+        display: none;
     }
-    .mobile-menu{
+    .mobile-menu-icon {
         display: block;
     }
-    /* historia */
-    #historia-capoeira{
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+    .open {
         display: block;
     }
     #conteiner-historia{
-        display: block;
+    flex-direction: column;
     }
     .bio-historia{
-        width: 50vh;
-       
+        width: 100%;
+        padding: 2rem;
     }
     .img-historia{
-        width: 90vh;
+        width: 100%;
+        padding: 2rem;
     }
+    .bio-historia p{
+        text-align: justify;
+    }
+
 }
